@@ -6,8 +6,8 @@
 import streamlit as st
 import pandas as pd
 df = pd.DataFrame({
-  '第一列': [1, 2, 3, 4],
-  '第二列': [10, 20, 30, 40]
+  '第一列': [1, 2, 3, 4,5],
+  '第二列': [10, 20, 30, 40,50]
 })
 
 df
