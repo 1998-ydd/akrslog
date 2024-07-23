@@ -49,14 +49,15 @@ def get_MapPos(Dict,line):
 keyword_process = [
         "LeftBondModule - 当前力控值",
         "记录上次键合位置为",
-        "当前键合位置Map坐标为",
-]
+        "当前键合位置Map坐标为",]
 Process = gendict(["time","Force","High"])
 
 uploaded_file = st.file_uploader("上传日志文件", type=["txt", "log"])
 
 if uploaded_file is not None:
     for line in uploaded_file:
+        print(line)
+        break
         if keyword_process[0] in line:
             get_process(Process,line)
     df = pd.DataFrame(Process)
