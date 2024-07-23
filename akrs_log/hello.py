@@ -56,8 +56,7 @@ uploaded_file = st.file_uploader("上传日志文件", type=["txt", "log"])
 
 if uploaded_file is not None:
     for line in uploaded_file:
-        line
-        break
+        line = line.decode('utf-8')
         if keyword_process[0] in line:
             get_process(Process,line)
     df = pd.DataFrame(Process)
