@@ -5,7 +5,7 @@
 
 import streamlit as st
 import pandas as pd
-
+import re
 
 
 def gendict(namelist:list)->dict:
