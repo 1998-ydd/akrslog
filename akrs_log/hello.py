@@ -59,5 +59,5 @@ if uploaded_file is not None:
     for line in uploaded_file:
         if keyword_process[0] in line:
             get_process(Process,line)
-df = pd.DataFrame(Process)
-df
+    df = pd.DataFrame(Process)
+    st.table(df)
