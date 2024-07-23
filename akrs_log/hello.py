@@ -55,8 +55,8 @@ Process = gendict(["time","Force","High"])
 
 uploaded_file = st.file_uploader("上传日志文件", type=["txt", "log"])
 
-with open(uploaded_file, "r") as f:
-    for line in f:
+if uploaded_file is not None:
+    for line in uploaded_file:
         if keyword_process[0] in line:
             get_process(Process,line)
 df = pd.DataFrame(Process)
